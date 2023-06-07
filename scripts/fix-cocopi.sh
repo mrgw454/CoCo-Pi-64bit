@@ -76,6 +76,24 @@ else
 fi
 
 
+# add AUTOEXEC programs to support large HDD with YADOS
+# check for fix
+fix="fix-20230607-01"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	if [ ! -d /media/share1/DW4/AUTOEXEC ]
+		mkdir /media/share1/DW4/AUTOEXEC
+	fi
+		
+	unzip -o -j $HOME/update/AUTOEXEC.zip -d /media/share1/DW4/AUTOEXEC
+	echo "$fix" >>$file
+	echo
+fi
+
 
 echo
 
