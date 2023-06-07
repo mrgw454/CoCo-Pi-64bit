@@ -1,0 +1,100 @@
+{
+   "checksum": "8f8564111425e9c367987fad7792cc9a",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13330626878508130",
+            "date_last_used": "0",
+            "guid": "de1f2740-87df-4eb5-828f-5d40d3b6b91a",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "The CoCo-Pi Project – CoCo family emulation on the Pi3, Pi4, Pi400",
+            "type": "url",
+            "url": "https://coco-pi.com/"
+         }, {
+            "date_added": "13330630869713130",
+            "date_last_used": "0",
+            "guid": "d0c76eae-a404-4413-bd1d-9122e5cae3da",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "TRS-80 Color Computer Archive",
+            "type": "url",
+            "url": "https://colorcomputerarchive.com/"
+         }, {
+            "children": [ {
+               "date_added": "13330626140677119",
+               "date_last_used": "0",
+               "guid": "e3a75080-a32c-4e2d-a004-d4b15085dd48",
+               "id": "6",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "1. CoCo-Pi Support - request magic key",
+               "type": "url",
+               "url": "http://10.8.0.1:6502/"
+            }, {
+               "date_added": "13330626028166222",
+               "date_last_used": "0",
+               "guid": "17f50e7f-9fc6-434f-82d7-6bde8476f0ac",
+               "id": "5",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "2. CoCo-Pi Support (turn on / turn off)",
+               "type": "url",
+               "url": "http://localhost:6502/"
+            }, {
+               "date_added": "13330626200340861",
+               "date_last_used": "0",
+               "guid": "af850fd0-237b-4e20-8820-ad9807b56412",
+               "id": "8",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Play-Classics.net",
+               "type": "url",
+               "url": "http://10.8.0.1/"
+            } ],
+            "date_added": "13330626800197560",
+            "date_last_used": "0",
+            "date_modified": "13330630869713130",
+            "guid": "4bd2c716-3594-4ffe-80e6-cdaef13b476d",
+            "id": "9",
+            "name": "CoCo-Pi Support (RVPN)",
+            "type": "folder"
+         } ],
+         "date_added": "13330626001320262",
+         "date_last_used": "0",
+         "date_modified": "13330630983262988",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13330626001320397",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13330626001320402",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

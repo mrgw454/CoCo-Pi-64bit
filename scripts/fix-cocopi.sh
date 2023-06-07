@@ -96,6 +96,27 @@ else
 fi
 
 
+# add RVPN support utilities
+# check for fix
+fix="fix-20230607-02"
+if grep -q "$fix" $file; then
+	echo fix $fix already complete.
+	echo
+else
+	echo Applying fix $fix...
+	echo
+	sudo apt install lynx
+		
+	tar xzf /home/pi/update/RVPN-support-20230607.tar.gz -C /	
+
+	cp $HOME/update/Bookmarks $HOME/.config/chromium/Default
+	cp $HOME/update/Preferences $HOME/.config/chromium/Default
+	echo "$fix" >>$file
+	echo
+fi
+
+
+
 echo
 
 echo
