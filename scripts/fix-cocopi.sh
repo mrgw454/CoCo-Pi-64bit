@@ -85,7 +85,8 @@ if grep -q "$fix" $file; then
 else
 	echo Applying fix $fix...
 	echo
-	if [ ! -d /media/share1/DW4/AUTOEXEC ]
+	if [ ! -d /media/share1/DW4/AUTOEXEC ]; then
+	
 		mkdir /media/share1/DW4/AUTOEXEC
 	fi
 		
