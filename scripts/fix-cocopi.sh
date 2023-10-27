@@ -161,6 +161,27 @@ else
 fi
 
 
+# fix RDP connection issue
+# check for fix
+fix="fix-20231027-05"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+	
+	sudo adduser xrdp ssl-cert
+	sudo cp /etc/X11/xrdp/xorg.conf /etc/X11/xrdp/xorg.conf.backup.original
+	sudo sed -i 's/Option "DRMDevice" "\/dev\/dri\/renderD128"/Option "DRMDevice" ""/' /etc/X11/xrdp/xorg.conf
+	
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 echo
 echo
