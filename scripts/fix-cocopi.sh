@@ -142,6 +142,25 @@ else
 fi
 
 
+# add HOWTO file for compiling new geany 2.0
+# check for fix
+fix="fix-20231027-04"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+	
+	cp /home/pi/update/20231027/HOWTO-compile-geany-2.0_and_geany-plugins-2.0.txt /home/pi/source
+	
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 echo
 echo

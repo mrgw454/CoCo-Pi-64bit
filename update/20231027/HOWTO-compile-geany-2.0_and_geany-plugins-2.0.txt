@@ -1,0 +1,21 @@
+https://www.geany.org/
+
+cd $HOME/source
+wget https://download.geany.org/geany-2.0.tar.gz
+wget https://plugins.geany.org/geany-plugins/geany-plugins-2.0.tar.gz
+
+tar zxvf geany-2.0.tar.gz
+tar zxvf geany-plugins/geany-plugins-2.0.tar.gz
+
+cd geany-2.0
+./configure
+make
+sudo make install
+
+cd ..
+cd geany-plugins-2.0
+./configure
+make
+sudo make install
+
+
