@@ -12,7 +12,7 @@ whiptail --title "Backup Emulator Configuration Files" --textbox msg.txt 0 0
 rm msg.txt
 
 rm /media/share1/backupEMUConfigs.tar.gz
-tar czvf /media/share1/backupEMUConfigs-$(date '+%Y-%m-%d').tar.gz $HOME/.mame/*.ini $HOME/.mame/cfg/* $HOME/.xroar/*.conf $HOME/.ovcc/ini/*.ini $HOME/.mame/.optional* $HOME/.xroar/.optional* /home/pi/.config/trs80gp
+tar czvf /media/share1/backupEMUConfigs-$(date '+%Y-%m-%d').tar.gz $HOME/.mame/*.ini $HOME/.mame/cfg/* $HOME/.xroar/*.conf $HOME/.ovcc/ini/*.ini $HOME/.mame/.optional* $HOME/.xroar/.optional* /home/pi/.config/trs80gp /home/pi/.trs80gp/.optional*
 ln -s /media/share1/backupEMUConfigs-$(date '+%Y-%m-%d').tar.gz /media/share1/backupEMUConfigs.tar.gz
 
 echo -e
