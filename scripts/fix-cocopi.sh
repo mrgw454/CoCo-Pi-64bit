@@ -107,6 +107,41 @@ else
 fi
 
 
+# update compile scripts and stage geany 2.0
+# check for fix
+fix="fix-20231027-03"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+	sudo apt install libgtk-3-dev
+	
+	sudo ln -s /usr/share/intltool-debian/intltool-extract /usr/local/bin/intltool-extract
+	sudo ln -s /usr/share/intltool-debian/intltool-merge /usr/local/bin/intltool-merge
+	sudo ln -s /usr/share/intltool-debian/intltool-update /usr/local/bin/intltool-update
+      
+    tar zxf /home/pi/update/20231027/geany-2.0-20231027-CoCoPi.tar.gz -C /
+
+	#sudo apt remove geany geany-common
+	
+	#cd /home/pi/source/geany-2.0
+	#sudo make install
+
+	#cd /home/pi/source/geany-plugins-2.0
+	#sudo make install
+	
+	cp /home/pi/update/20231027/compile-ugBasic-coco.sh /home/pi/scripts
+	cp /home/pi/update/20231027/compile-BASIC-mc10.sh /home/pi/scripts
+	
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 echo
 echo
