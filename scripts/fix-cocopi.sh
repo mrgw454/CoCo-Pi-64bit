@@ -89,6 +89,24 @@ else
 fi
 
 
+# update makeDSK-XRoar script
+# check for fix
+fix="fix-20231027-02"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+    cp /home/pi/update/20231027/makeDSK-XRoar.sh /home/pi/scripts
+
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 echo
 echo
