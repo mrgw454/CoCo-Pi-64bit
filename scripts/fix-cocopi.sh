@@ -182,6 +182,31 @@ else
 fi
 
 
+# update ugBasic and ugBasic-beta
+# check for fix
+fix="fix-20231029-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+      
+    tar zxf /home/pi/update/20231029/ugBasic-20231029-CoCoPi.tar.gz -C /
+    tar zxf /home/pi/update/20231029/ugBasic-beta-20231028-CoCoPi.tar.gz -C /
+	
+	sudo cp /home/pi/source/ugbasic/ugbc/exe/* /usr/local/bin
+	sudo cp /home/pi/source/ugbasic-beta/ugbc/exe/* /usr/local/bin
+	
+	cp /home/pi/update/20231029/compile-ugBasic-coco.sh /home/pi/scripts
+	
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 echo
 echo
