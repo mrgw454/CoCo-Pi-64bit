@@ -237,8 +237,8 @@ else
     echo Applying fix $fix...
     echo
 
-    tar zxf /home/pi/update/20231029/ugBasic-20231106-CoCoPi.tar.gz -C /
-    tar zxf /home/pi/update/20231029/ugBasic-beta-20231106-CoCoPi.tar.gz -C /
+    tar zxf /home/pi/update/20231106/ugBasic-20231106-CoCoPi.tar.gz -C /
+    tar zxf /home/pi/update/20231106/ugBasic-beta-20231106-CoCoPi.tar.gz -C /
 
     sudo cp /home/pi/source/ugbasic/ugbc/exe/* /usr/local/bin
     sudo cp /home/pi/source/ugbasic-beta/ugbc/exe/* /usr/local/bin
