@@ -250,6 +250,26 @@ else
 fi
 
 
+# update MAME CoCo 3 laucnh scripts
+# check for fix
+fix="fix-20231106-02"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+
+    cp /home/pi/update/20231106/coco3-decb-6309-2MB.sh /home/pi/.mame
+    cp /home/pi/update/20231106/coco3-decb.sh /home/pi/.mame
+
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 echo
 echo
