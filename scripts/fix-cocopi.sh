@@ -250,7 +250,7 @@ else
 fi
 
 
-# update MAME CoCo 3 laucnh scripts
+# update MAME CoCo 3 launch scripts
 # check for fix
 fix="fix-20231106-02"
 if grep -q "$fix" $file; then
@@ -262,6 +262,29 @@ else
 
     cp /home/pi/update/20231106/coco3-decb-6309-2MB.sh /home/pi/.mame
     cp /home/pi/update/20231106/coco3-decb.sh /home/pi/.mame
+
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
+# update ugBasic and ugBasic-beta
+# check for fix
+fix="fix-20231108-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+
+    tar zxf /home/pi/update/20231108/ugBasic-20231108-CoCoPi.tar.gz -C /
+    tar zxf /home/pi/update/20231108/ugBasic-beta-20231108-CoCoPi.tar.gz -C /
+
+    sudo cp /home/pi/source/ugbasic/ugbc/exe/* /usr/local/bin
+    sudo cp /home/pi/source/ugbasic-beta/ugbc/exe/* /usr/local/bin
 
     cd $HOME
 
