@@ -316,6 +316,30 @@ else
 fi
 
 
+# organize geany build commands, update scripts and update to latest ugBasic (including beta)
+# check for fix
+fix="fix-20231121-01"
+if grep -q "$fix" $file; then
+   echo fix $fix already complete.
+   echo
+else
+   echo Applying fix $fix...
+   echo
+   sed -i "s/number_exec_menu_items=24/number_exec_menu_items=32/" /home/pi/.config/geany/geany.conf
+
+   tar zxf /home/pi/update/20231121/ugBasic-20231121-CoCoPi.tar.gz -C /
+   tar zxf /home/pi/update/20231121/ugBasic-beta-20231121-CoCoPi.tar.gz -C /
+
+   sudo cp /home/pi/source/ugbasic/ugbc/exe/* /usr/local/bin
+   sudo cp /home/pi/source/ugbasic-beta/ugbc/exe/* /usr/local/bin
+
+   cp /home/pi/update/20231121/filetypes* /home/pi/.config/geany/filedefs
+
+   cp /home/pi/update/20231121/*.sh /home/pi/scripts
+   echo "$fix" >>$file
+   echo
+fi
+
 
 echo
 echo
