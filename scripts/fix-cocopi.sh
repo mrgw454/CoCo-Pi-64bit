@@ -341,6 +341,31 @@ else
 fi
 
 
+# installed pre-staged geany 2.0
+# check for fix
+fix="fix-20231125-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+	
+	sudo apt remove geany geany-common
+
+	cd /home/pi/source/geany-2.0
+	sudo make install
+
+	cd /home/pi/source/geany-plugins-2.0
+	sudo make install
+
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 echo
 echo
 echo Please reboot as soon as possible so all updates can be applied.  Thank you.
