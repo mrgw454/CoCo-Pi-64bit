@@ -351,7 +351,7 @@ else
     echo Applying fix $fix...
     echo
 	
-	sudo apt remove geany geany-common
+	sudo apt remove -y geany geany-common
 
 	cd /home/pi/source/geany-2.0
 	sudo make install
