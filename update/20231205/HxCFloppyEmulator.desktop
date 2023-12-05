@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=HxCFloppyEmulator
+Exec=/home/pi/source/HxCFloppyEmulator/build/hxcfloppyemulator
+Comment=
+Terminal=false
+Icon=/home/pi/source/HxCFloppyEmulator/HxCFloppyEmulator_software/sources/win32/mainicon.ico
+Type=Application
+Path=/home/pi/source/HxCFloppyEmulator/build

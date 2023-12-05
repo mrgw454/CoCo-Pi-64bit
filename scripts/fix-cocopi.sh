@@ -389,6 +389,26 @@ else
 fi
 
 
+# install HxCFloppyEmulator from git
+# check for fix
+fix="fix-20231205-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+
+    tar zxf /home/pi/update/20231205/HxCFloppyEmulator-git-20231205.tar.gz -C /
+    cp /home/pi/update/20231205/HxCFloppyEmulator.desktop /home/pi/Desktop/Emulators
+
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 echo
 echo
 echo Please reboot as soon as possible so all updates can be applied.  Thank you.
