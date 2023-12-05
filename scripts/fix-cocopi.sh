@@ -428,6 +428,29 @@ else
 fi
 
 
+# install FlashFloppy
+# check for fix
+fix="fix-20231205-03"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+	
+	sudo apt -y install git gcc-arm-none-eabi python3-pip srecord stm32flash zip unzip wget
+	python3 -m pip install --user crcmod intelhex
+	tar zxf /home/pi/update/20231205/FlashFloppy-git-20231205.tar.gz -C /
+	
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
+
+
 echo
 echo
 echo Please reboot as soon as possible so all updates can be applied.  Thank you.
