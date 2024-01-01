@@ -478,6 +478,25 @@ else
 fi
 
 
+# update trs80gp
+# check for fix
+fix="fix-20231209-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+
+    sudo cp /home/pi/update/20231209/trs80gp /usr/local/bin
+
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 
 
 echo
