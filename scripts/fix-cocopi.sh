@@ -437,11 +437,40 @@ if grep -q "$fix" $file; then
 else
     echo Applying fix $fix...
     echo
-	
+
 	sudo apt -y install git gcc-arm-none-eabi python3-pip srecord stm32flash zip unzip wget
 	python3 -m pip install --user crcmod intelhex
 	tar zxf /home/pi/update/20231205/FlashFloppy-git-20231205.tar.gz -C /
-	
+
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
+# install misc script updates
+# check for fix
+fix="fix-20240101-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+
+	cp /home/pi/update/20240101/coco3-hdbdos-6309-nitros9-ide.sh /home/pi/.mame
+	cp /home/pi/update/20240101/CoCoPi-menu-Utilities-Downloads.sh /home/pi/.mame
+
+	cp /home/pi/update/20240101/coco3-yados-nitros9-xroar.sh /home/pi/.xroar
+
+	cp /home/pi/update/20240101/downloadJimGOS9.sh /home/pi/scripts
+	cp /home/pi/update/20240101/downloadNitrOS9EOU.sh /home/pi/scripts
+	cp /home/pi/update/20240101/downloadUltimateSDC.sh /home/pi/scripts
+	cp /home/pi/update/20240101/get-rpi-info.sh /home/pi/scripts
+	cp /home/pi/update/20240101/select-emu.sh /home/pi/scripts
+	cp /home/pi/update/20240101/updateEOU-IDE.sh /home/pi/scripts
+
     cd $HOME
 
     echo "$fix" >>$file
