@@ -1,0 +1,5 @@
+[select-project-build scipt]
+
+It is not recommended building the following projects for the RPi3 B+ platform: libagar, lzsa, mame, OVCC, nitros-code, nitros9, qb64, ugBasic and ugBasic-beta.
+
+This is primarily due to insufficient resources of the RPi3 B+.  In some cases, unloading the Display Server (Wayland / X) can help, but your results may vary.

@@ -449,6 +449,25 @@ else
 fi
 
 
+# update trs80gp
+# check for fix
+fix="fix-20231209-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+
+    sudo cp /home/pi/update/20231209/trs80gp /usr/local/bin
+
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
+
 # install misc script updates
 # check for fix
 fix="fix-20240101-01"
@@ -478,9 +497,9 @@ else
 fi
 
 
-# update trs80gp
+# install misc script updates
 # check for fix
-fix="fix-20231209-01"
+fix="fix-20240131-01"
 if grep -q "$fix" $file; then
     echo fix $fix already complete.
     echo
@@ -488,7 +507,10 @@ else
     echo Applying fix $fix...
     echo
 
-    sudo cp /home/pi/update/20231209/trs80gp /usr/local/bin
+	cp /home/pi/update/20240131/scripts/* /home/pi/scripts
+	cp /home/pi/update/20240131/source/* /home/pi/source
+	cp /home/pi/update/20240131/.mame/* /home/pi/.mame
+	cp /home/pi/update/20240131/.xroar/* /home/pi/.xroar
 
     cd $HOME
 
