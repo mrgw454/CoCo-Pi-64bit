@@ -519,6 +519,27 @@ else
 fi
 
 
+# install misc script updates
+# check for fix
+fix="fix-20240221-01"
+if grep -q "$fix" $file; then
+    echo fix $fix already complete.
+    echo
+else
+    echo Applying fix $fix...
+    echo
+
+	cp /home/pi/update/20240221/scripts/* /home/pi/scripts
+	cp /home/pi/update/20240221/source/* /home/pi/source
+	cp /home/pi/update/20240221/.mame/* /home/pi/.mame
+	cp /home/pi/update/20240221/.mame/cfg/* /home/pi/.mame/cfg
+
+    cd $HOME
+
+    echo "$fix" >>$file
+    echo
+fi
+
 
 
 echo
